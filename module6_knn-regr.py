@@ -6,9 +6,9 @@ class KNN:
         self.X_train = None
         self.Y_train = None
 
-    def train(self, X, y):
+    def train(self, X, Y):
         self.X_train = np.array(X, dtype=float)
-        self.Y_train = np.array(y, dtype=float)
+        self.Y_train = np.array(Y, dtype=float)
 
     def predict(self, X_test):
         if self.k > len(self.X_train):
