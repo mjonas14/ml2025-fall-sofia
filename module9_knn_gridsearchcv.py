@@ -28,13 +28,13 @@ def read_non_neg_ints(prompt: str) -> int:
             print("Invalid input. Please enter a non-negative integer.")
 
 
-def read_data_points(N: int, set_name: str) -> tuple[np.ndarray, np.ndarray]:
-    X_data = np.empty(N, dtype=float)
-    Y_data = np.empty(N, dtype=int)
+def read_data_points(num: int, set_name: str) -> tuple[np.ndarray, np.ndarray]:
+    X_data = np.empty(num, dtype=float)
+    Y_data = np.empty(num, dtype=int)
 
     print(f"\nEnter the {set_name} data points (x, y):")
     print("(x = input feature, y = class label)")
-    for i in range(N):
+    for i in range(num):
         while True:
             try:
                 x = float(input(f"  x{i + 1}: "))
