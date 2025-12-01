@@ -67,7 +67,7 @@ def main() -> None:
     X_train_2d = X_train.reshape(-1, 1)
     X_test_2d = X_test.reshape(-1, 1)
 
-    # Use simple cross-validation (KFold avoids stratification issues)
+    # Using KFold to avoid stratification issues
     cv_folds = 3 if N >= 6 else 2
     cv = KFold(n_splits=cv_folds, shuffle=False)
     
